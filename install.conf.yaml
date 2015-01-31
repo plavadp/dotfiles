@@ -1,4 +1,7 @@
 - clean: []
 - link: 
         ~/.vimrc: vimrc
+        ~/.bashrc: bashrc
+        ~/.vim: vim
+        ~/.tmux: tmux
 - shell: []
