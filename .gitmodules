@@ -13,3 +13,9 @@
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "vim/bundle/syntax"]
+	path = vim/bundle/syntax
+	url = https://github.com/octol/vim-cpp-enhanced-highlight.git
+[submodule "vim/bundle/fugitive"]
+	path = vim/bundle/fugitive
+	url = https://github.com/tpope/vim-fugitive
