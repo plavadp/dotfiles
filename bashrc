@@ -14,7 +14,6 @@ fi
 #-------------------------------------------------------------
 # Some settings
 #-------------------------------------------------------------
-shopt -s cdspell
 export EnvironmentToUse=Staging
 
 export CC=/spot/dev/3rdParty/cpp/gnu/gcc/gcc-4.9.1/bin/gcc
@@ -29,8 +28,8 @@ export PATH=/usr/local/bin:$PATH
 alias disableProxy='unset http_proxy'
 alias enableProxy='export http_proxy=http://svc.proxyaccess:SpotAccess@chidproxy02data.spottrading.com:80'
 
-alias ninja='/spot/dev/3rdParty/cpp/misc/ninja/ninja-v1.4.0/gcc-4.8.2/bin/ninja -C out/Release all'
-alias ninjadebug='/spot/dev/3rdParty/cpp/misc/ninja/ninja-v1.4.0/gcc-4.8.2/bin/ninja -C out/Debug all'
+alias ninja='/spot/dev/3rdParty/cpp/misc/ninja/ninja-1.5.1/gcc-4.9.1/bin/ninja -C out/Release all'
+alias ninjadebug='/spot/dev/3rdParty/cpp/misc/ninja/ninja-1.5.1/gcc-4.9.1/bin/ninja -C out/Debug all'
 
 ALERT=${BWhite}${On_Red} # Bold White on red background
 

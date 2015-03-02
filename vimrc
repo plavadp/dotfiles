@@ -1,4 +1,3 @@
-
 set nocompatible " not vi compatible
 
 "--------------
@@ -10,12 +9,12 @@ call pathogen#helptags()
 
 filetype plugin indent on
 
-let mapleader=","
-let maplocalleader=","
-
 set number
 set tags+=/usr/local/share/ctags/qt4
 set mouse=a
+
+let mapleader=","
+let maplocalleader=","
 
 filetype indent on
 set shiftwidth=4
@@ -47,6 +46,9 @@ syntax on " turn on syntax highlighting
 set showmatch " show matching braces when text indicator is over them
 set number " line numbers
 
+vmap <Left> <gv
+vmap <Right> <gv
+
 
 color delek
 
@@ -54,6 +56,9 @@ color delek
 nnoremap <leader>ev :vsplit $MYVIMRC<cr> 
 nnoremap <leader>sv :source $MYVIMRC<cr> 
 
+
+" switch between .h/.cpp
+nnoremap <leader>a :A<CR>
 
 " fast split screen navigation
 nnoremap <c-w><c-w> iNOPENOPENOPENOPE<esc>
@@ -72,9 +77,15 @@ nnoremap <leader>n :set makeprg=/spot/dev/3rdParty/cpp/misc/ninja/ninja-1.5.1/gc
 nnoremap <leader>d :set makeprg=/spot/dev/3rdParty/cpp/misc/ninja/ninja-1.5.1/gcc-4.9.1/bin/ninja\ -C\ out/Debug\ all<cr>
 nnoremap <leader>N :set makeprg=make<cr>
 
+set makeprg=/spot/dev/3rdParty/cpp/misc/ninja/ninja-1.5.1/gcc-4.9.1/bin/ninja\ -C\ out/Debug\ all<cr>
+
 " swap lines
 nnoremap _ ddkP
 nnoremap - ddp
+
+" operator parens, brackets, quotes
+onoremap p i(
+
 
 " fast semicolon
 nnoremap <leader>; mqA;<esc>`q
@@ -92,4 +103,3 @@ function! ColorToggle()
         let g:desert_on = 1
     endif
 endfunction
-
