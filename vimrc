@@ -7,6 +7,8 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
 
+source ~/.vim/bundle/a.vim
+
 filetype plugin indent on
 
 set number
@@ -50,7 +52,7 @@ vmap <Left> <gv
 vmap <Right> <gv
 
 
-color delek
+color desert
 
 " vimrc controls
 nnoremap <leader>ev :vsplit $MYVIMRC<cr> 
@@ -72,13 +74,6 @@ nnoremap <leader>m :wa<cr> :Make<cr>
 nnoremap <leader>mm :wa<cr> :make -j12<cr>
 nnoremap <leader>mc :wa<cr> :make check -j12<cr>
 
-" toggle ninja
-nnoremap <leader>n :set makeprg=/spot/dev/3rdParty/cpp/misc/ninja/ninja-1.5.1/gcc-4.9.1/bin/ninja\ -C\ out/Release\ all<cr>
-nnoremap <leader>d :set makeprg=/spot/dev/3rdParty/cpp/misc/ninja/ninja-1.5.1/gcc-4.9.1/bin/ninja\ -C\ out/Debug\ all<cr>
-nnoremap <leader>N :set makeprg=make<cr>
-
-set makeprg=/spot/dev/3rdParty/cpp/misc/ninja/ninja-1.5.1/gcc-4.9.1/bin/ninja\ -C\ out/Debug\ all<cr>
-
 " swap lines
 nnoremap _ ddkP
 nnoremap - ddp
@@ -86,13 +81,15 @@ nnoremap - ddp
 " operator parens, brackets, quotes
 onoremap p i(
 
-
 " fast semicolon
 nnoremap <leader>; mqA;<esc>`q
 
+map <C-n> :NERDTreeToggle<cr>
+
+
 nnoremap <leader>C :call ColorToggle()<cr>
 
-let g:desert_on = 0
+let g:desert_on = 1
 
 function! ColorToggle()
     if g:desert_on
